@@ -1,11 +1,11 @@
 {
-  "name": "nova-docs",
-  "version": "1.1.0",
+  "name": "nova",
+  "version": "1.2.1",
   "scripts": {
     "start": "scripts/start",
     "push": "scripts/push",
     "test": "scripts/test",
-    "build": "scripts/build"
+    "build": "scripts/build2"
   },
   "eslintConfig": {
     "extends": "./node_modules/react-scripts/config/eslint.js"
@@ -22,7 +22,7 @@
   },
   "main": "src/index.js",
   "description": "Single source of truth for Nova documentation",
-  "homepage": "http://trevordmiller.github.io/nova-docs",
+  "homepage": "http://trevordmiller.github.io/nova",
   "author": "Trevor D. Miller <trevordmiller@icloud.com> (http://www.trevordmiller.com)",
   "license": "MIT",
   "private": true
