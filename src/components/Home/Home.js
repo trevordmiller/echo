@@ -6,6 +6,7 @@ import Colors from './Colors'
 import Characteristics from './Characteristics'
 import Platforms from './Platforms'
 import Contributing from './Contributing'
+import Faq from './Faq'
 
 const sections = [
   {
@@ -23,6 +24,10 @@ const sections = [
   },
   {
     elements: <Platforms />,
+  },
+  {
+    title: 'Frequently Asked Questions',
+    elements: <Faq />,
   },
   {
     title: 'Contributing',
