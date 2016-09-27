@@ -37,17 +37,19 @@ class Intro extends React.Component {
     return (
       <div>
         <Heading level={1}>
-          <Typist
-            cursor={cursor}
-            startDelay={pauses.long}
-            avgTypingDelay={pauses.medium}
-            onTypingDone={this.handleLogoEnd}
-          >
-            {about.title}
-          </Typist>
+          {this.props.hasSeenAnimation ? about.title
+            : <Typist
+              cursor={cursor}
+              startDelay={pauses.long}
+              avgTypingDelay={pauses.medium}
+              onTypingDone={this.handleLogoEnd}
+            >
+              {about.title}
+            </Typist>
+          }
         </Heading>
         <Heading level={2}>
-          {this.state.hasLogoEnded
+          {this.state.hasLogoEnded || this.props.hasSeenAnimation
             ? <Typist
                 cursor={cursor}
                 startDelay={pauses.medium}
@@ -66,6 +68,7 @@ class Intro extends React.Component {
 
 Intro.propTypes = {
   onIntroEnd: React.PropTypes.func.isRequired,
+  hasSeenAnimation: React.PropTypes.bool.isRequired,
 }
 
 export default Intro
