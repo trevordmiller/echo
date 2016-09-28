@@ -1,4 +1,5 @@
 import React from 'react'
+import { isLocalStorageSupported } from '../utils/features'
 import {
   screenSizes,
   colors,
@@ -16,15 +17,38 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      hasIntroEnded: false,
+      hasSeenAnimation: isLocalStorageSupported && !!localStorage.getItem('visited'),
     }
     this.handleIntroEnd = this.handleIntroEnd.bind(this)
+    this.handleTransitionEnd = this.handleTransitionEnd.bind(this)
+    this.handleMainMount = this.handleMainMount.bind(this)
   }
 
   handleIntroEnd() {
+    if (this.state.hasSeenAnimation) return null
+
+    if (isLocalStorageSupported) {
+      localStorage.setItem('visited', true)
+    }
+
     this.setState({
-      hasIntroEnded: true,
+      hasSeenAnimation: true,
     })
+  }
+
+  handleTransitionEnd() {
+    if (window.location.hash !== '') {
+      const el = document.querySelector(window.location.hash)
+      if (el) {
+        el.scrollIntoView()
+      }
+    }
+  }
+
+  handleMainMount(el) {
+    if (el) {
+      el.addEventListener('transitionend', this.handleTransitionEnd, false)
+    }
   }
 
   render() {
@@ -40,31 +64,31 @@ class App extends React.Component {
         flexDirection: 'column',
         alignItems: 'center',
         minHeight: '100vh',
-        height: this.state.hasIntroEnded ? 'auto' : '100vh',
-        overflowY: this.state.hasIntroEnded ? 'auto' : 'hidden',
+        height: this.state.hasSeenAnimation ? 'auto' : '100vh',
+        overflowY: this.state.hasSeenAnimation ? 'auto' : 'hidden',
       }}>
-        <div style={{
-          maxWidth: screenSizes.large,
-        }}>
-          <div style={{
-            willChange: this.state.hasIntroEnded ? 'auto' : 'margin',
-            transition: `margin ${animationSpeeds.fast}s ease`,
-            ...this.state.hasIntroEnded
-              ? {}
-              : {marginTop: '30vh'}
-          }}>
-            <Header onIntroEnd={this.handleIntroEnd} />
-          </div>
-          <div style={{
-            willChange: this.state.hasIntroEnded ? 'auto' : 'opacity',
-            transition: `opacity ${animationSpeeds.medium}s ease`,
-            opacity: this.state.hasIntroEnded ? 1 : 0,
-          }}>
-            <Main>
-              {this.props.children}
-            </Main>
-          </div>
-        </div>
+      <div style={{
+        maxWidth: screenSizes.large,
+      }}>
+      <div style={{
+        willChange: this.state.hasSeenAnimation ? 'auto' : 'margin',
+        transition: `margin ${animationSpeeds.fast}s ease`,
+        ...this.state.hasSeenAnimation
+        ? {}
+        : {marginTop: '30vh'}
+      }}>
+      <Header onIntroEnd={this.handleIntroEnd} hasSeenAnimation={this.state.hasSeenAnimation} />
+    </div>
+    <div style={{
+      willChange: this.state.hasSeenAnimation ? 'auto' : 'opacity',
+      transition: `opacity ${animationSpeeds.medium}s ease`,
+      opacity: this.state.hasSeenAnimation ? 1 : 0,
+    }} ref={this.handleMainMount}>
+    <Main>
+      { this.state.hasSeenAnimation ? this.props.children : null }
+    </Main>
+  </div>
+</div>
       </div>
     )
   }
