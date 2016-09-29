@@ -16,6 +16,7 @@ const platforms = [
       'Install "othree/html5.vim" for full HTML colors',
       'Install "hail2u/vim-css3-syntax" for full CSS colors',
       'Install "mxw/vim-jsx" for full React colors',
+      'If you use "vim-airline", it works automatically',
     ],
     links: [
       {
