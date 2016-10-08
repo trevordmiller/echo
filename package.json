@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "nova-colors": "1.2.0",
+    "raven-js": "3.7.0",
     "react": "15.3.1",
     "react-dom": "15.3.1",
     "react-scripts": "0.6.1",
