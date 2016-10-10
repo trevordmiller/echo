@@ -11,7 +11,7 @@ const platforms = [
     notes: [
       'You\'ll need True Color support (latest Vim, Neovim, or GUI Vim)',
       'For terminal Vim use, your terminal will also need True Color support',
-      'Using the Nova HyperTerm or iTerm plugin is recommended',
+      'Using the Nova Hyper or iTerm plugin is recommended',
       'Install "pangloss/vim-javascript", for full JS colors',
       'Install "othree/html5.vim" for full HTML colors',
       'Install "hail2u/vim-css3-syntax" for full CSS colors',
