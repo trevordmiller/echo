@@ -62,7 +62,7 @@ const platforms = [
     icon: 'hyperterm',
     screenshot: 'https://github.com/trevordmiller/nova-hyperterm/raw/master/assets/screenshot.png?raw=true',
     steps: [
-      'Add "nova-hyperterm" to the "plugins" array in your "~/.hyperterm.js"',
+      'Add "nova-hyperterm" to the "plugins" array in your "~/.hyperterm.js" (NOTE: HyperTerm recently changed its name to Hyper and for new installations this file is "~/.hyper.js")',
       'Restart HyperTerm',
     ],
     links: [
