@@ -11,7 +11,7 @@
     "extends": "./node_modules/react-scripts/config/eslint.js"
   },
   "devDependencies": {
-    "react-scripts": "0.3.0",
+    "react-scripts": "0.6.1",
     "react-test-renderer": "15.3.1"
   },
   "dependencies": {
@@ -19,7 +19,6 @@
     "raven-js": "3.7.0",
     "react": "15.3.1",
     "react-dom": "15.3.1",
-    "react-scripts": "0.6.1",
     "react-tabs": "0.7.0",
     "react-typist": "0.3.0"
   },
