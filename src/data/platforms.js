@@ -58,16 +58,16 @@ const platforms = [
     ],
   },
   {
-    title: 'HyperTerm',
-    icon: 'hyperterm',
+    title: 'Hyper',
+    icon: 'hyper',
     screenshot: 'https://github.com/trevordmiller/nova-hyperterm/raw/master/assets/screenshot.png?raw=true',
     steps: [
-      'Add "nova-hyperterm" to the "plugins" array in your "~/.hyperterm.js" (NOTE: HyperTerm recently changed its name to Hyper and for new installations this file is "~/.hyper.js")',
-      'Restart HyperTerm',
+      'Add "nova-hyperterm" to the "plugins" array in your "~/.hyper.js"',
+      'Restart Hyper',
     ],
     links: [
       {
-        title: 'Example ".hyperterm.js"',
+        title: 'Example ".hyper.js"',
         url: 'https://github.com/trevordmiller/nova-hyperterm/blob/master/assets/.hyperterm.js',
       },
       {
