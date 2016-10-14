@@ -10,6 +10,8 @@ const List = ({
 }) => (
   <div>
     {items.map((item, index) => (
+      const itemText = typeof item === 'string' ? item : item.text;
+
       <div
         key={index}
         style={{
@@ -29,7 +31,7 @@ const List = ({
               />
           }
         </span>
-        {item}
+        {itemText}
       </div>
     ))}
   </div>
