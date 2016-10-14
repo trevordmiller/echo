@@ -21,10 +21,7 @@ const contributing = {
         'Use the "nova-colors" npm package to consume colors',
         'Use the dedicated color meanings',
         'Add "npm start" and "npm test" scripts',
-        {
-          text: 'Submit a pull request to the "nova" repo "platforms"',
-          link: 'https://github.com/trevordmiller/nova/blob/master/src/data/platforms.js'
-        }
+        'Submit a pull request to the "nova" repo "platforms"',
       ],
     },
   ],
