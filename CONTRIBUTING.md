@@ -22,7 +22,7 @@ Good luck and thanks for contributing!
 
 ### Creating Plugins
 
-1. Use the [nova-colors](https://github.com/trevordmiller/nova-colors/blob/master/src/index.js) npm package to consume colors. An example of doing this being accomplished directly can be seen in [nova hyperterm](https://github.com/trevordmiller/nova-hyperterm/blob/master/index.js). For use in a build project with a build step check out [nova-vim](https://github.com/trevordmiller/nova-vim).
+1. Use the [nova-colors](https://github.com/trevordmiller/nova-colors/blob/master/src/index.js) npm package to consume colors. [nova hyperterm](https://github.com/trevordmiller/nova-hyperterm/blob/master/index.js) has an example of doing this directly, and [nova-vim](https://github.com/trevordmiller/nova-vim) has an example of doing this with a build step.
 2. Add "npm start" and "npm test" scripts
 3. Submit a pull request to the ["nova" repo "platforms"](https://github.com/trevordmiller/nova/blob/master/src/data/platforms.js)
 
