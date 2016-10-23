@@ -1,0 +1,26 @@
+#!/bin/bash
+set -euo pipefail
+
+release_type=$1
+
+script-log state "Pulling latest"
+git pull
+
+script-log state "Building latest"
+npm run build
+
+script-log state "Converting to docs folder for GitHub pages"
+npm run docs
+
+script-log state "Committing docs"
+git add -A
+git commit -m "Add latest build"
+
+script-log state "Bumping version"
+npm version "$release_type" -m "Release %s"
+
+script-log state "Pushing"
+git push --set-upstream origin master
+git push --tags
+
+script-log state "Done"
