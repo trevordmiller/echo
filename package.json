@@ -3,8 +3,8 @@
   "version": "1.17.2",
   "scripts": {
     "start": "scripts/start",
-    "push": "scripts/push",
     "test": "scripts/test",
+    "build": "scripts/build",
     "docs": "scripts/docs"
   },
   "eslintConfig": {
@@ -22,7 +22,7 @@
     "react-tabs": "0.8.0",
     "react-typist": "1.0.2"
   },
-  "main": "src/index.js",
+  "main": "build/index.js",
   "description": "Single source of truth for Nova documentation",
   "homepage": "http://trevordmiller.github.io/nova",
   "author": "Trevor D. Miller <trevordmiller@icloud.com> (http://www.trevordmiller.com)",

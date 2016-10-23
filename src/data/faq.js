@@ -1,7 +1,7 @@
 const faq = [
   {
     question: `Where is editor/plugin {x}?`,
-    answer: `If you don't see it in the list, it doesn't exist yet! The Nova admins only maintain the Vim, Atom, Hyper, and iTerm plugins, but the community has built or is building others (see the "nova-colors" repo issues). Feel free to build one too using the "CONTRIBUTING" guidelines.`,
+    answer: `If you don't see it in the list, it doesn't exist yet! The Nova admins only maintain the Vim, Atom, Hyper, and iTerm plugins, but the community has built or is building others (see the "nova-colors" repo issues). Feel free to build one too using the instructions in the "CONTRIBUTING.md".`,
   },
   {
     question: `Is there an {x} version?`,
@@ -13,7 +13,7 @@ const faq = [
   },
   {
     question: `Can I contribute?`,
-    answer: `Yes! We would love to have your help. Just follow the "CONTRIBUTING" guidelines.`,
+    answer: `Yes! We would love to have your help. Check out the "CONTRIBUTING.md" in the related repo.`,
   },
 ]
 

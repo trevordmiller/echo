@@ -1,7 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-react-scripts build
 rm -rf docs/
 cp -r build/ docs/
 rm -rf build/
