@@ -6,7 +6,7 @@ import {
   TabPanel,
 } from 'react-tabs'
 Tabs.setUseDefaultStyles(false)
-import platforms from '../../data/platforms'
+import plugins from '../../data/plugins'
 import {
   colors,
   spacing,
@@ -50,7 +50,7 @@ class Platforms extends React.Component {
           borderTopRightRadius: borderRadii.large,
           borderTopLeftRadius: borderRadii.large,
         }}>
-          {platforms.map((platform, index) => (
+          {plugins.map((plugin, index) => (
             <Tab
               key={index}
               onClick={this.handleTabClick.bind(this, index)}
@@ -71,7 +71,7 @@ class Platforms extends React.Component {
                 width: '60%',
               }}>
                 <Icon
-                  type={platform.icon}
+                  type={plugin.icon}
                   fill={
                     index === this.state.activeTab
                       ? colors.normal.cyan
@@ -82,7 +82,7 @@ class Platforms extends React.Component {
             </Tab>
           ))}
         </TabList>
-        {platforms.map((platform, index) => (
+        {plugins.map((plugin, index) => (
           <TabPanel
             key={index}
             style={{
@@ -98,25 +98,25 @@ class Platforms extends React.Component {
             }}
           >
             <Heading level={4}>
-              {platform.title}
+              {plugin.title}
             </Heading>
             <div style={{
               marginTop: spacing.large,
             }}>
-              {platform.screenshot
+              {plugin.screenshot
                 ? <div style={{
                     marginBottom: spacing.medium,
                   }}>
                     <Image
-                      src={platform.screenshot}
+                      src={plugin.screenshot}
                       quiet={true}
                     />
                   </div>
                 : null
               }
-              {platform.steps
+              {plugin.steps
                 ? <div style={{
-                    marginBottom: (platform.notes || platform.links)
+                    marginBottom: (plugin.notes || plugin.links)
                       ? spacing.medium
                       : 0,
                   }}>
@@ -124,32 +124,32 @@ class Platforms extends React.Component {
                       Instructions
                     </Heading>
                     <List
-                      items={platform.steps}
+                      items={plugin.steps}
                       type='number'
                     />
                   </div>
                 : null
               }
-              {platform.notes
+              {plugin.notes
                 ? <div style={{
-                    marginBottom: (platform.links)
+                    marginBottom: (plugin.links)
                       ? spacing.medium
                       : 0,
                   }}>
                     <Heading level={3}>
                       Notes
                     </Heading>
-                    <List items={platform.notes} />
+                    <List items={plugin.notes} />
                   </div>
                 : null
               }
-              {platform.links
+              {plugin.links
                 ? <div>
                     <Heading level={3}>
                       Links
                     </Heading>
                     <List
-                      items={platform.links.map(link => (
+                      items={plugin.links.map(link => (
                         <Link
                           href={link.url}
                           inline={true}

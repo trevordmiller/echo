@@ -4,8 +4,7 @@ import Contributors from './Contributors'
 import ExampleCode from './ExampleCode'
 import Colors from './Colors'
 import Characteristics from './Characteristics'
-import Platforms from './Platforms'
-import Contributing from './Contributing'
+import Plugins from './Plugins'
 import Faq from './Faq'
 
 const sections = [
@@ -23,15 +22,12 @@ const sections = [
     elements: <Characteristics />,
   },
   {
-    elements: <Platforms />,
+    title: 'Plugins',
+    elements: <Plugins />,
   },
   {
     title: 'Frequently Asked Questions',
     elements: <Faq />,
-  },
-  {
-    title: 'Contributing',
-    elements: <Contributing />,
   },
 ]
 

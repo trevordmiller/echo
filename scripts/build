@@ -1,0 +1,4 @@
+#!/bin/bash
+set -euo pipefail
+
+react-scripts build

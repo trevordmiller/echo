@@ -1,4 +1,4 @@
-const platforms = [
+const plugins = [
   {
     title: 'Vim',
     icon: 'vim',
@@ -22,6 +22,10 @@ const platforms = [
       {
         title: 'Example ".vimrc"',
         url: 'https://github.com/trevordmiller/nova-vim/blob/master/assets/.vimrc',
+      },
+      {
+        title: 'Contributing instructions',
+        url: 'https://github.com/trevordmiller/nova-vim/blob/master/CONTRIBUTING.md',
       },
       {
         title: 'Source code',
@@ -48,11 +52,19 @@ const platforms = [
     ],
     links: [
       {
-        title: 'Source code for the UI Plugin',
+        title: 'Contributing instructions for the UI plugin',
+        url: 'https://github.com/trevordmiller/nova-atom-ui/blob/master/CONTRIBUTING.md',
+      },
+      {
+        title: 'Contributing instructions for the syntax plugin',
+        url: 'https://github.com/trevordmiller/nova-atom-syntax/blob/master/CONTRIBUTING.md',
+      },
+      {
+        title: 'Source code for the UI plugin',
         url: 'https://github.com/trevordmiller/nova-atom-ui',
       },
       {
-        title: 'Source code for the Syntax Plugin',
+        title: 'Source code for the syntax plugin',
         url: 'https://github.com/trevordmiller/nova-atom-syntax',
       },
     ],
@@ -69,6 +81,10 @@ const platforms = [
       {
         title: 'Example ".hyper.js"',
         url: 'https://github.com/trevordmiller/nova-hyperterm/blob/master/assets/.hyperterm.js',
+      },
+      {
+        title: 'Contributing instructions',
+        url: 'https://github.com/trevordmiller/nova-hyperterm/blob/master/CONTRIBUTING.md',
       },
       {
         title: 'Source code',
@@ -90,6 +106,10 @@ const platforms = [
       {
         title: 'nova.itermcolors',
         url: 'https://raw.githubusercontent.com/trevordmiller/nova-iterm/master/build/nova.itermcolors',
+      },
+      {
+        title: 'Contributing instructions',
+        url: 'https://github.com/trevordmiller/nova-iterm/blob/master/CONTRIBUTING.md',
       },
       {
         title: 'Source code',
@@ -140,22 +160,27 @@ const platforms = [
     icon: 'npm',
     steps: [
       'npm install -S nova-colors',
-      'import novaColors from "nova-colors"',
-      'novaColors.{colorCategory}.{colorType}',
+      'import {group} from \'nova-colors\''
     ],
     notes: [
-      '"normal": standard 8 ANSI colors',
-      '"bright": bright variations ("black", "red", "magenta", "white")',
-      '"decoration": gray variations ("dark", "medium", "light")',
+      'The package provides the Nova color values mapped by group type (syntax, UI, version control etc.)',
     ],
     links: [
       {
-        title: 'Example using nova-colors directly',
-        url: 'https://github.com/trevordmiller/nova-hyperterm/blob/master/index.js',
+        title: 'API',
+        url: 'https://github.com/trevordmiller/nova-colors/blob/master/src/index.js',
       },
       {
-        title: 'Example using nova-colors with a build step',
-        url: 'https://github.com/trevordmiller/nova-vim/blob/master/src/index.js',
+        title: 'Example plugin using nova-colors directly',
+        url: 'https://github.com/trevordmiller/nova-hyperterm',
+      },
+      {
+        title: 'Example plugin using nova-colors with a build step',
+        url: 'https://github.com/trevordmiller/nova-vim',
+      },
+      {
+        title: 'Contributing instructions',
+        url: 'https://github.com/trevordmiller/nova-colors/blob/master/CONTRIBUTING.md',
       },
       {
         title: 'Source code',
@@ -165,4 +190,4 @@ const platforms = [
   },
 ]
 
-export default platforms
+export default plugins
