@@ -188,6 +188,25 @@ const plugins = [
       },
     ],
   },
+  {
+    title: 'Sublime Text',
+    icon: 'heart',
+    screenshot: 'https://github.com/driesvints/nova-sublime-text/raw/master/assets/screenshot.png?raw=true',
+    steps: [
+      'Copy the \'Nova.tmTheme\' to your \'Packages/Colorsublime-Themes\' directory',
+      'Change your \'color_scheme\' in your user preferences'
+    ],
+    links: [
+      {
+        title: 'Contributing instructions',
+        url: 'https://github.com/driesvints/nova-sublime-text/blob/master/CONTRIBUTING.md',
+      },
+      {
+        title: 'Source code',
+        url: 'https://github.com/driesvints/nova-sublime-text',
+      },
+    ],
+  },
 ]
 
 export default plugins
